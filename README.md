@@ -44,12 +44,32 @@ var bundle = browserify({
 });
 
 bundle.use(loadify({
-	name: 'myModule', // global that will be available if loaded via script tag
+	name: 'myScript', // global that will be available if loaded via script tag
 	module: './my_script.js'
 }));
 
 // write your bundle to a file
 ```
+
+This will enable your client script to be included with require.js (or similar) or simply by including a script tag.
+
+```html
+<script src="/path/to/require.js"></script>
+<script>
+	require(['my_script.compiled.js'], function(myScript){
+		// do stuff with myScript
+	});
+</script>
+```
+Or
+
+```html
+<script src="my_script.compiled.js"></script>
+<script>
+	// do stuff with myScript
+</script>
+```
+
 
 ## Tests
 
