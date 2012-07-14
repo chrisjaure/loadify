@@ -53,7 +53,7 @@ bundle.use(loadify({
 
 ## Tests
 
-To run tests in the browser, browse to `./test/index.html`. If you make changes, run `node ./test/fixture/compile.js` to recomplile the client javascript.
+To run tests in the browser, make sure you've got the devDependencies installed and browse to `./test/index.html`. If you make changes, run `node ./test/fixture/compile.js` to recomplile the client javascript.
 
 
 ## TODO
